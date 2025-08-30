@@ -1,0 +1,1083 @@
+<!--  Deepak Portfolio  — index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deepak - Portfolio</title>
+  <meta name="description" content="A sleek portfolio clone with smooth animations, sections, and responsive layout." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <!-- Backdrop particles -->
+  <div class="bg-particles" aria-hidden="true"></div>
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#hero">
+        <span class="brand-grad">Deepak</span>
+        <!-- <span class="brand-dim">'s Portfolio</span> -->
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <!-- change here -->
+        <a href="#connect" class="nav-link">Contact</a>
+
+
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+          <svg id="iconMoon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor" />
+          </svg>
+          <svg id="iconSun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" style="display:none">
+            <circle cx="12" cy="12" r="5" fill="currentColor" />
+            <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path
+                d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+            </g>
+          </svg>
+        </button>
+
+        <a href="./resume/Deepak_Singh.pdf" class="btn btn-resume" download="Deepak_Singh.pdf" rel="noopener">Resume</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true">
+      <!-- nav -->
+
+      <a href="#hero" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#certifications" class="mobile-link">Certifications</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="./resume/Deepak_Singh.pdf" class="btn btn-resume" download="Deepak_Singh.pdf" rel="noopener">Resume</a>
+
+    </div>
+  </header>
+
+  <section id="hero" class="hero section hero-pro">
+    <!-- animated aurora + glows -->
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <div class="hero-glow g1" aria-hidden="true"></div>
+    <div class="hero-glow g2" aria-hidden="true"></div>
+
+    <div class="container hero-wrap">
+      <div class="hero-copy">
+        <h1 class="hero-title">
+          Hi, I'm <span class="grad-sheen">Deepak Singh</span> <br /><span class="role-flip" id="rotator">Data
+            Analyst</span>
+        </h1>
+
+        <p class="hero-sub">
+          Passionate about turning data into actionable insights. Skilled in
+          data analysis, visualization, and machine learning. Exploring APIs
+          and data integration techniques and Realtime AI applications.
+        </p>
+
+        <div class="cta-row">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#connect" class="btn btn-ghost">Let’s Connect</a>
+        </div>
+
+        <!-- floating badges -->
+        <div class="float-badges">
+          <div class="socials icons">
+            <span class="fb">
+              <a class="icon icon-github" href="https://github.com/1908Deepak" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58 0-.29-.01-1.06-.02-2.08-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.1-.75.08-.74.08-.74 1.22.09 1.87 1.26 1.87 1.26 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.66-.3-5.46-1.33-5.46-5.9 0-1.3.47-2.37 1.25-3.2-.13-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.22a11.5 11.5 0 0 1 6 0c2.28-1.54 3.29-1.22 3.29-1.22.66 1.65.25 2.87.12 3.17.78.83 1.25 1.9 1.25 3.2 0 4.58-2.8 5.59-5.47 5.89.43.37.81 1.1.81 2.22 0 1.6-.01 2.88-.01 3.27 0 .32.21.7.82.58A12 12 0 0 0 12 .5Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </span>
+            <span class="fb">
+              <a class="icon icon-linkedin" href="https://www.linkedin.com/in/1908deepak/" target="_blank"
+                aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M6.94 8.5V19H3.75V8.5h3.19ZM5.35 5.5a1.85 1.85 0 1 1 0-3.7 1.85 1.85 0 0 1 0 3.7ZM20.25 19h-3.17v-5.43c0-1.3-.47-2.18-1.64-2.18-.9 0-1.43.61-1.67 1.2-.09.2-.11.48-.11.76V19H10.5s.04-8.53 0-9.41h3.16v1.33c.42-.65 1.16-1.58 2.83-1.58 2.06 0 3.76 1.35 3.76 4.25V19Z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </span>
+            <span class="fb">
+              <a class="icon icon-code" href="https://leetcode.com/u/railoth/" target="_blank" aria-label="Code">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 16 4 12l4-4M16 8l4 4-4 4M10 19l4-14" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </span>
+
+            <!-- Tableau BI instead of YouTube -->
+            <span class="fb">
+              <a class="icon icon-powerbi" href="https://public.tableau.com/app/profile/1908deepak" target="_blank"
+                aria-label="Power BI">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="10" width="3" height="8" rx="1" fill="currentColor" />
+                  <rect x="8" y="7" width="3" height="11" rx="1" fill="currentColor" />
+                  <rect x="13" y="5" width="3" height="13" rx="1" fill="currentColor" />
+                  <path d="M19 7v10a2 2 0 0 1-2 2h-1" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" />
+                </svg>
+              </a>
+            </span>
+            <span class="fb">
+              <a class="icon icon-coursera" href="https://www.coursera.org/learner/1908deepak" target="_blank"
+                aria-label="Coursera">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c3.54 0 6.71-1.84 8.55-4.62l-2.84-1.64A6.96 6.96 0 0 1 12 19c-3.31 0-6-2.69-6-6s2.69-6 6-6a6.96 6.96 0 0 1 5.71 3.26l2.84-1.64C18.71 3.84 15.54 2 12 2z"
+                    fill="currentColor" />
+                </svg>
+              </a>
+            </span>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- hero visual card (kept for balance; optional image) -->
+      <div class="hero-visual card card-3d">
+        <img src="./assets/Deepak.jpg" alt="Deepak avatar" class="avatar" />
+        <div class="chip-row">
+          <span class="chip">Deepak Singh</span>
+          <!-- <span class="chip">SQL</span>
+          <span class="chip">TensorFlow</span> -->
+        </div>
+      </div>
+    </div>
+    <!-- scroll cue -->
+    <a href="#certifications" class="scroll-cue" aria-label="Scroll to certification">
+      <span></span>
+    </a>
+  </section>
+  <!----About Me Section---->
+
+  <section id="about" class="hero section hero-pro">
+    <!-- animated aurora + glows -->
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <div class="hero-glow g1" aria-hidden="true"></div>
+    <div class="hero-glow g2" aria-hidden="true"></div>
+
+    <div class="container hero-wrap">
+      <div class="hero-copy">
+        <h2 class="hero-title">
+          <span class="grad-sheen">About Me</span>
+        </h2>
+
+        <p class="hero-sub">
+          I am a <strong>M.Tech Final Year student</strong> in Computer
+          Science Engineering, currently researching
+          <strong>AI-based solutions for Skin Cancer Detection</strong>. My
+          passion lies in applying
+          <strong>Machine Learning, Artificial Intelligence, and Data Science</strong>
+          to solve real-world healthcare challenges.
+          <br />
+          <BR></BR>
+          With hands-on experience in <strong>hackathons</strong> (including
+          Nokia), impactful projects, and
+          <strong>data annotation</strong> work, I thrive in environments
+          where innovation meets collaboration.
+        </p>
+        <br />
+        <!----Education Section---->
+        <h4 class="hero-title1">
+          <span class="grad-sheen1">Education</span>
+        </h4>
+
+        <h3>M.Tech in Computer Science & Engineering</h3>
+        <p>Chandigarh Engineering College, Mohali</p>
+        <p>2024–2026 | 8.22 CGPA</p>
+        <h4>Relevant Coursework:</h4>
+        <div class="float-badges1">
+          <span class="fb1">Advanced Algorithms</span>
+          <span class="fb1">Advanced Data Structures</span>
+          <span class="fb1">Optimization Research</span>
+          <span class="fb1">Optimization Techniques</span>
+        </div>
+        <BR></BR>
+
+        <h3>B.Tech in Computer Science & Engineering</h3>
+        <p>
+          Kamla Nehru Institute Of Physical & Social Sciences, Sultanpur
+        </p>
+        <p>2019–2023 | 7.78 CGPA</p>
+
+        <h4>Relevant Coursework:</h4>
+        <div class="float-badges1">
+          <span class="fb1">Machine Learning</span>
+          <span class="fb1">Deep Learning</span>
+          <span class="fb1">Data Structures</span>
+          <span class="fb1">Operating Systems</span>
+          <span class="fb1">Computer Networks</span>
+        </div>
+
+      </div>
+      <div class="about-cards">
+        <div class="card glass">
+          <h3>Research</h3>
+          <p>
+            Developing AI-driven healthcare solutions for
+            <strong>Skin Cancer Detection</strong>.
+          </p>
+        </div>
+        <div class="card glass">
+          <h3>Hackathons</h3>
+          <p>
+            Participant in <strong>Nokia ML/AI Hackathons</strong>, building
+            innovative prototypes.
+          </p>
+        </div>
+        <div class="card glass">
+          <h3>Projects</h3>
+          <p>
+            Contributed to <strong>data annotation</strong> and impactful
+            AI/ML projects.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Skills Section -->
+  <section id="skills" class="hero section hero-pro">
+    <!-- animated aurora + glows -->
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <div class="hero-glow g1" aria-hidden="true"></div>
+    <div class="hero-glow g2" aria-hidden="true"></div>
+
+    <div class="container hero-wrap">
+      <div class="hero-copy">
+        <h2 class="hero-title">
+          <span class="grad-sheen">Skills</span>
+        </h2>
+        <br>
+        <!----skill sub---->
+        <h4 class="hero-title1">
+          <span class="grad-sheen1">Machine Learning</span>
+        </h4>
+        <div class="float-badges1">
+          <span class="fb1">TensorFlow</span>
+          <span class="fb1">PyTorch</span>
+          <span class="fb1">Numpy</span>
+          <span class="fb1">Scikit-learn</span>
+        </div>
+        <BR></BR>
+        <h4 class="hero-title1">
+          <span class="grad-sheen1">Programming Languages</span>
+        </h4>
+        <div class="float-badges1">
+          <span class="fb1">C Language</span>
+          <span class="fb1">C++ Language</span>
+          <span class="fb1">Python Language</span>
+          <span class="fb1">R - Language</span>
+        </div>
+        <BR></BR>
+        <h4 class="hero-title1">
+          <span class="grad-sheen1">Front-End Development</span>
+        </h4>
+        <div class="float-badges1">
+          <span class="fb1">HTML</span>
+          <span class="fb1">CSS</span>
+          <span class="fb1">JavaScript</span>
+          <span class="fb1">Bootstrap</span>
+        </div>
+        <BR></BR>
+        <h4 class="hero-title1">
+          <span class="grad-sheen1">Databases</span>
+        </h4>
+        <div class="float-badges1">
+          <span class="fb1">MongoDB</span>
+          <span class="fb1">SQL</span>
+          <span class="fb1">MySQL</span>
+        </div>
+        <br>
+        <h4 class="hero-title1">
+          <span class="grad-sheen1">Data Visualization</span>
+        </h4>
+        <div class="float-badges1">
+          <span class="fb1">Power BI</span>
+          <span class="fb1">Tableau</span>
+          <span class="fb1">Excel</span>
+          <span class="fb1">Google Data Studio</span>
+        </div>
+        <br>
+        <h4 class="hero-title1">
+          <span class="grad-sheen1">Tools & Technologies</span>
+        </h4>
+        <div class="float-badges1">
+          <span class="fb1">Git</span>
+          <span class="fb1">GitHub</span>
+          <span class="fb1">Jupyter</span>
+          <span class="fb1">VS Code</span>
+          <span class="fb1">Kaggle</span>
+        </div>
+        <br>
+        <h4 class="hero-title1">
+          <span class="grad-sheen1">Deployment</span>
+        </h4>
+        <div class="float-badges1">
+          <span class="fb1">Netlify</span>
+          <span class="fb1">Vercel</span>
+          <span class="fb1">Render</span>
+          <span class="fb1">Streamlit</span>
+        </div>
+      </div>
+  </section>
+
+  <!-- Projects -->
+
+
+
+
+  <!-- Projects Section -->
+  <section id='projects' class="Projects section hero-pro">
+    <!-- animated aurora + glows -->
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <div class="hero-glow g1" aria-hidden="true"></div>
+    <div class="hero-glow g2" aria-hidden="true"></div>
+    <!-- <h2>Projects</h2> -->
+    <div class="container">
+      <div class="project-list">
+        <h2 class="hero-title">
+          <span class="grad-sheen">Projects</span>
+        </h2>
+
+        <!-- Row 1 -->
+        <div class="project-row">
+          <div class="project-media-wrap">
+            <img class="project-media" src="./ProjectImage/House Data analyis.png"
+              alt="People collaborating on laptops" />
+            <div class="media-overlay">
+              <a class="ov-btn"
+                href="https://app.powerbi.com/links/GjvxKOR88s?ctid=37d002c9-062c-435d-beff-d1efc9989fe4&pbi_source=linkShare"
+                target="_blank" rel="noopener">Live</a>
+              <a class="ov-btn" href="https://github.com/1908Deepak/Housing-Data-Analysis" target="_blank"
+                rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <!-- your existing badge, title, desc, tags, etc. -->
+            <div class="project-content">
+              <div class="badge-pill">
+                <span class="bp-icon">👤</span>
+                <span class="bp-text">Data Analysis</span>
+              </div>
+              <h3 class="project-title">Housing Data Analysis</h3>
+              <p class="project-desc">
+                Developed a data analysis dashboard using Power BI to visualize housing market trends.
+                Including interactive charts and KPIs for better decision-making.
+                <br>
+              <p>Note : Power BI Desktop is required to view the report.</p>
+              </p>
+              <div class="tags tags-soft">
+                <span>DAX</span><span>power-bi</span><span>CSV file</span><span>Excel</span>
+              </div>
+              <a class="learn-link" href="#" target="_blank" rel="noopener">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 (reversed layout) -->
+        <div class="project-row reverse">
+          <div class="project-content">
+            <!-- badge, title, desc, tags -->
+            <div class="project-content">
+              <div class="badge-pill">
+                <span class="bp-icon">👤</span>
+                <span class="bp-text">Data Analysis</span>
+              </div>
+              <h3 class="project-title">ABC Bank Loan Data Analysis</h3>
+              <p class="project-desc">
+                Developed a data analysis dashboard using Power BI to visualize loan data trends.
+                Including interactive charts and KPIs for better decision-making.
+                <br>
+              <p>Note : Power BI Desktop is required to view the report.</p>
+
+              </p>
+              <div class="tags tags-soft">
+                <span>DAX</span><span>power-bi</span><span>Google Big Query</span><span>Excel</span><span>Kaggle
+                  Datasets</span>
+              </div>
+              <a class="learn-link" href="#" target="_blank" rel="noopener">Learn more</a>
+            </div>
+          </div>
+          <div class="project-media-wrap">
+            <img class="project-media" src="./ProjectImage/Bank.png" alt="Brain model" />
+            <div class="media-overlay">
+              <a class="ov-btn"
+                href="https://app.powerbi.com/links/Gl1GZMHFWZ?ctid=37d002c9-062c-435d-beff-d1efc9989fe4&pbi_source=linkShare"
+                target="_blank" rel="noopener">Live</a>
+              <a class="ov-btn" href="https://github.com/1908Deepak/ABC-Bank-Loan-Data-Analysis" target="_blank"
+                rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <!-- Row 3 -->
+        <div class="project-row">
+          <div class="project-media-wrap">
+            <img class="project-media" src="./ProjectImage/Spotify.png" alt="People collaborating on laptops" />
+            <div class="media-overlay">
+              <a class="ov-btn"
+                href=" https://app.powerbi.com/links/zuv8iCAYt8?ctid=37d002c9-062c-435d-beff-d1efc9989fe4&pbi_source=linkShare"
+                target="_blank" rel="noopener">Live</a>
+              <a class="ov-btn" href="https://github.com/1908Deepak/Spotify-Data-Analysis" target="_blank"
+                rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <!-- your existing badge, title, desc, tags, etc. -->
+            <div class="project-content">
+              <div class="badge-pill">
+                <span class="bp-icon">👤</span>
+                <span class="bp-text">Data Analysis</span>
+              </div>
+              <h3 class="project-title">Spotify Data Analysis</h3>
+              <p class="project-desc">
+                Created an interactive Power BI dashboard to analyze Spotify music trends,
+                featuring visualizations of song popularity, genres, and user demographics.
+                <br>
+              <p>Note : Power BI Desktop is required to view the report.</p>
+              </p>
+              <div class="tags tags-soft">
+                <span>DAX</span><span>power-bi</span><span>SQL Database</span><span>Excel</span><span>Kaggle
+                  Datasets</span>
+              </div>
+              <a class="learn-link" href="#" target="_blank" rel="noopener">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 4 (reversed layout) -->
+        <div class="project-row reverse">
+          <div class="project-content">
+            <!-- badge, title, desc, tags -->
+            <div class="project-content">
+              <div class="badge-pill">
+                <span class="bp-icon">👤</span>
+                <span class="bp-text">Data Analysis</span>
+              </div>
+              <h3 class="project-title">Clothing Data Analysis</h3>
+              <p class="project-desc">
+                Created an interactive Power BI dashboard to analyze clothing sales data,
+                featuring visualizations of sales trends, customer demographics, and product performance.
+                <br>
+              <p>Note : Power BI Desktop is required to view the report.</p>
+              </p>
+              <div class="tags tags-soft">
+                <span>DAX</span><span>power-bi</span><span>Azure SQL Database</span><span>Excel</span><span>Kaggle
+                  Datasets</span>
+              </div>
+              <a class="learn-link" href="#" target="_blank" rel="noopener">Learn more</a>
+            </div>
+          </div>
+          <div class="project-media-wrap">
+            <img class="project-media" src="./ProjectImage/Clothing.png" alt="Brain model" />
+            <div class="media-overlay">
+              <a class="ov-btn"
+                href="https://app.powerbi.com/links/SrB9WmfQL4?ctid=37d002c9-062c-435d-beff-d1efc9989fe4&pbi_source=linkShare"
+                target="_blank" rel="noopener">Live</a>
+              <a class="ov-btn" href="https://github.com/1908Deepak/Clothing-Data-Analysis" target="_blank"
+                rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="project-row">
+          <div class="project-media-wrap">
+            <img class="project-media" src="./ProjectImage/Insurance.png"
+              alt="People collaborating on laptops" />
+            <div class="media-overlay">
+              <a class="ov-btn"
+                href="https://app.powerbi.com/groups/9dfd857a-796e-4f06-82d4-c4d57ddb57f0/reports/266d70fb-f7e4-45ac-84ef-e7b3ad6fe072/b1562978409a404112cb?experience=power-bi"
+                target="_blank" rel="noopener">Live</a>
+              <a class="ov-btn" href="https://github.com/1908Deepak/Insurance-Data-Analysis" target="_blank"
+                rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <!-- your existing badge, title, desc, tags, etc. -->
+            <div class="project-content">
+              <div class="badge-pill">
+                <span class="bp-icon">👤</span>
+                <span class="bp-text">Data Analysis</span>
+              </div>
+              <h3 class="project-title">Insurance Data Analysis</h3>
+              <p class="project-desc">
+                Developed a data analysis dashboard using Power BI to visualize insurance market trends.
+                Including interactive charts and KPIs for better decision-making.
+                <br>
+              <p>Note : Power BI Desktop is required to view the report.</p>
+              </p>
+              <div class="tags tags-soft">
+                <span>DAX</span><span>power-bi</span><span>Excel Workbook</span><span>Google Datasets</span>
+              </div>
+              <a class="learn-link" href="#" target="_blank" rel="noopener">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 6 (reversed layout) -->
+        <div class="project-row reverse">
+          <div class="project-content">
+            <!-- badge, title, desc, tags -->
+            <div class="project-content">
+              <div class="badge-pill">
+                <span class="bp-icon">👤</span>
+                <span class="bp-text">Data Analysis</span>
+              </div>
+              <h3 class="project-title">StakeHolder Data Analysis</h3>
+              <p class="project-desc">
+                Created an interactive Tableau dashboard to analyze stakeholder data,
+                featuring visualizations of engagement trends, demographics, and feedback analysis.
+              </p>
+              <div class="tags tags-soft">
+                <span>DAX</span><span>Tableau</span><span>CSV files</span><span>Excel</span>
+
+              </div>
+              <a class="learn-link" href="https://public.tableau.com/app/profile/1908deepak/vizzes" target="_blank"
+                rel="noopener">Learn more</a>
+            </div>
+          </div>
+          <div class="project-media-wrap">
+            <img class="project-media" src="./ProjectImage/stakeholder.png" alt="Brain model" />
+            <div class="media-overlay">
+              <a class="ov-btn"
+                href="https://public.tableau.com/views/StakeHolder/StakeholderDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+                target="_blank" rel="noopener">Live</a>
+              <a class="ov-btn" href="https://github.com/1908Deepak/StakeHolder-Data-Analysis" target="_blank"
+                rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 7 -->
+        <div class="project-row">
+          <div class="project-media-wrap">
+            <img class="project-media" src="./ProjectImage/Fashion.png" alt="People collaborating on laptops" />
+            <div class="media-overlay">
+              <a class="ov-btn" href="https://fashion-mnist-1908.streamlit.app/" target="_blank" rel="noopener">Live</a>
+              <a class="ov-btn" href="https://github.com/1908Deepak/Deep-Learning-Projects/tree/main/fashion"
+                target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <!-- your existing badge, title, desc, tags, etc. -->
+            <div class="project-content">
+              <div class="badge-pill">
+                <span class="bp-icon">👤</span>
+                <span class="bp-text">Deep Learning</span>
+              </div>
+              <h3 class="project-title">Fashion Recommendation System</h3>
+              <p class="project-desc">
+                Developed a fashion recommendation system using deep learning techniques,
+                leveraging user preferences and clothing attributes to suggest personalized outfits.
+              </p>
+              <div class="tags tags-soft">
+                <span>Deep Learning</span><span>ML
+                  Algorithms</span><span>Fashion</span><span>NeuralNetwork</span><span>Streamlit</span><span>Google
+                  Colab</span>
+              </div>
+              <a class="learn-link" href="#" target="_blank" rel="noopener">Learn more</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 8 (reversed layout) -->
+        <div class="project-row reverse">
+          <div class="project-content">
+            <!-- badge, title, desc, tags -->
+            <div class="project-content">
+              <div class="badge-pill">
+                <span class="bp-icon">🧠</span>
+                <span class="bp-text">Machine Learning</span>
+              </div>
+              <h3 class="project-title">House Price Prediction</h3>
+              <p class="project-desc">
+                Built ML models to predict House price using
+                Logistic Regression and SVM techniques, leveraging various features
+                to enhance accuracy.
+              </p>
+              <div class="tags tags-soft">
+                <span>Python</span><span>Machine Learning</span><span>Streamlit</span><span>Logistic
+                  Regression</span><span>Kaggle Datasets</span><span>Jupyter Notebook</span>
+              </div>
+              <a class="learn-link" href="#" target="_blank" rel="noopener">Learn more</a>
+            </div>
+          </div>
+          <div class="project-media-wrap">
+            <img class="project-media" src="./ProjectImage/houseprice.png" alt="Brain model" />
+            <div class="media-overlay">
+              <a class="ov-btn" href="https://housepriceprediction-1908.streamlit.app/" target="_blank"
+                rel="noopener">Live</a>
+              <a class="ov-btn" href="https://github.com/1908Deepak/HousePricePrediction" target="_blank"
+                rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications Section -->
+  <section id="certifications" class="hero section hero-pro">
+    <!-- animated aurora + glows -->
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <div class="hero-glow g1" aria-hidden="true"></div>
+    <div class="hero-glow g2" aria-hidden="true"></div>
+    <div class="container">
+      <h2 class="hero-title">
+        <span class="grad-sheen">Certificates</span>
+      </h2>
+      <br>
+
+      <div class="cert-grid">
+        <!-- Cert 1 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/Python certificate.png" class="cert-media"
+              alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view"
+              href="https://drive.google.com/file/d/1A8IDoQx7tCXVFitNei1k_tjoA289sf9M/view?usp=sharing" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">IIT Kanpur</span>
+            </div>
+            <h3 class="cert-title">
+              Python Programming - A Practical Approach
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> August 2021</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cert 2 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/MachineLearning.png" class="cert-media"
+              alt="Certificate preview – Power BI Data Analyst" />
+            <a class="cert-view" href="https://coursera.org/share/93935c7797d7491be1f4fc40f0af08fb" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">Stanford</span>
+            </div>
+
+            <h3 class="cert-title">
+              Machine Learning
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Jan 2022</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cert 3 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/NeuralNetwork.png" class="cert-media" alt="Certificate preview – Machine Learning" />
+            <a class="cert-view" href="https://coursera.org/share/d09b1a1721da2783db1b67b0748037bc" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">DeepLearning.AI</span>
+            </div>
+            <h3 class="cert-title">Neural Networks and Deep Learning</h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Nov 2024</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+        <!-- Cert 4 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/CNN.png" class="cert-media" alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view" href="https://coursera.org/share/78afd8ea8d199a22e26d0311f42e86c6" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">DeepLearning.AI</span>
+            </div>
+            <h3 class="cert-title">
+              Convolutional Neural Networks
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Nov 2024</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+        <!-- Cert 5 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/StructuringMachineProjects.png" class="cert-media"
+              alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view" href="https://coursera.org/share/c4daba65b8be118a394ddfe1cc3eaff5" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">DeepLearning.AI</span>
+            </div>
+            <h3 class="cert-title">
+              Structuring Machine Learning Projects
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Nov 2024</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+        <!-- Cert 6 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/SequenceModel.png" class="cert-media"
+              alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view" href="https://coursera.org/share/44577bd54e1d96dd919b229c9f9589df" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">DeepLearning.AI</span>
+            </div>
+            <h3 class="cert-title">
+              Sequence Models
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Dec 2024</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+        <!-- Cert 7 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/TotalML.png" class="cert-media" alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view" href="https://coursera.org/share/2ac907d364909071e8f81c55abd63764" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">DeepLearning.AI</span>
+            </div>
+            <h3 class="cert-title">
+              Deep Learning Specialization
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Dec 2024</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cert 8 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/HTML,CSS.png" class="cert-media" alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view" href="https://coursera.org/share/c65d6b65183104866baca66faa08ddfb" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">Duke</span>
+            </div>
+            <h3 class="cert-title">
+              Programming Foundations with JavaScript, HTML and CSS
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Aug 2022</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cert 9 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/DataAnalytics.png" class="cert-media"
+              alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view"
+              href="https://drive.google.com/file/d/1dWZwe_wVvCEkNaNzr5-UhfAxUZU6xeBS/view?usp=sharing" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">Udemy</span>
+            </div>
+            <h3 class="cert-title">
+              Complete Data Analytics Bootcamp From Basics To Advanced
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Aug 2025</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cert 10 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/YoungProfessional.png" class="cert-media"
+              alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view"
+              href="https://drive.google.com/file/d/1fvsBjm2bgLV_tmb2rLKIcbJgKKOzKBM8/view?usp=sharing" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">TCS ION</span>
+            </div>
+            <h3 class="cert-title">
+              TCS ION Career Edge - YoungProfessional
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Aug 2022</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cert 11 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/GUVI.png" class="cert-media" alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view" href="https://www.guvi.in/certificate?id=769j2L32E1Qg2u812v" target="_blank"
+              rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">GUVI</span>
+            </div>
+            <h3 class="cert-title">
+              Guinness World Record Event
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Aug 2021</span>
+              <span class="valid-badge">Lifetime</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cert 12 -->
+        <article class="cert card hover-lift">
+          <div class="cert-media-wrap">
+            <img src="./assets/Oracle.png" class="cert-media" alt="Certificate preview – Google Data Analytics" />
+            <a class="cert-view"
+              href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=F54A4D6030E4B0BFE3B972A5828A46730A19DC9CE265D074E518F50ADCF0B0F7"
+              target="_blank" rel="noopener">View
+              credential</a>
+          </div>
+          <div class="cert-body">
+            <div class="cert-top">
+              <span class="issuer-pill">Duke</span>
+            </div>
+            <h3 class="cert-title">
+              Oracle Cloud Infrastructure 2025 Certified Data Science Professional
+            </h3>
+            <div class="cert-meta">
+              <span><strong>Issued:</strong> Aug 2025</span>
+              <span><strong>Valid:</strong> Aug 2027</span>
+            </div>
+          </div>
+        </article>
+
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Lets Connect -->
+  <section id="connect" class="section connect-section">
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <div class="hero-glow g1" aria-hidden="true"></div>
+    <div class="hero-glow g2" aria-hidden="true"></div>
+    <div class="container center">
+      <h2 class="connect-title animate">Let's Connect</h2>
+      <p class="connect-sub animate">
+        Ready to bring your ideas to life? Let's discuss your next project and
+        create something extraordinary together.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="hero-aurora" aria-hidden="true"></div>
+    <div class="hero-glow g1" aria-hidden="true"></div>
+    <div class="hero-glow g2" aria-hidden="true"></div>
+    <div class="container contact-grid">
+
+      <!-- Left: Cards -->
+      <div class="contact-left">
+        <h2 class="section-title">Get in Touch</h2>
+        <br>
+        <p class="contact-intro">
+          I'm always excited to work on new projects and collaborate with
+          amazing people. Drop me a message and let's start building something
+          incredible!
+        </p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="cc-icon">
+              <!-- Email -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 7l9 6 9-6M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:deepaksingh190810@gmail.com">deepaksingh190810@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="cc-icon">
+              <!-- Phone -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M22 16.92v2a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.11 3.2 2 2 0 0 1 4.11 1h2a2 2 0 0 1 2 1.72c.12.9.33 1.77.62 2.61a2 2 0 0 1-.45 2.11L7.1 8.9a16 16 0 0 0 6 6l1.46-1.18a2 2 0 0 1 2.11-.45c.84.29 1.71.5 2.61.62A2 2 0 0 1 22 16.92z"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3>Phone</h3>
+              <p><a href="tel:+91 7275389264">+91 727 538 9264</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="cc-icon">
+              <!-- Location -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s-7-4.35-7-11a7 7 0 1 1 14 0c0 6.65-7 11-7 11z" fill="none" stroke="currentColor"
+                  stroke-width="2" />
+                <circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3>Location</h3>
+              <p>India</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="cc-icon">
+              <!-- LinkedIn Icon -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-14h4v2a4 4 0 0 1 2-2zm-10 0h4v14H6V8zm2-6a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="cc-body">
+              <h3>LinkedIn</h3>
+              <p>
+                <a href="https://www.linkedin.com/in/1908deepak/" target="_blank" rel="noopener">
+                  linkedin.com/in/deepak-singh-190810
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Form Panel -->
+      <aside class="contact-panel card glass">
+        <h3>Send a Message</h3>
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mqadprjo" method="POST">
+          <div class="row-two">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your full name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="your.email@example.com" required />
+            </label>
+          </div>
+
+          <label>
+            <span>Subject</span>
+            <input type="text" name="subject" placeholder="What's this about?" />
+          </label>
+
+          <label>
+            <span>Message</span>
+            <textarea name="message" rows="6" placeholder="Tell me about your project, ideas, or just say hello!"
+              required></textarea>
+          </label>
+
+          <!-- 👇 Add the hidden field here -->
+          <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+
+          <button type="submit" class="btn btn-cta">
+            <span>Send Message</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22 2L11 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              <path d="M22 2l-7 20-4-9-9-4 20-7z" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </aside>
+    </div>
+
+    <!-- Right: Form Panel -->
+
+
+  </section>
+  <!--footer-->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="moving-text">
+        <p>© 2025 Deepak's Portfolio. All rights reserved.</p>
+        <a href="#hero" class="to-top" aria-label="Back to top">↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
