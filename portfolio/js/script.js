@@ -10,14 +10,37 @@ window.addEventListener('scroll', () => {
 // Mobile menu toggle
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
+
 if (hamburger && mobileMenu) {
   hamburger.addEventListener('click', () => {
     const open = mobileMenu.style.display === 'flex';
     mobileMenu.style.display = open ? 'none' : 'flex';
     hamburger.setAttribute('aria-expanded', String(!open));
+    
+    // Animate hamburger icon
+    const spans = hamburger.querySelectorAll('span');
+    if (!open) {
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+    } else {
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
   });
+  
   document.querySelectorAll('.mobile-link').forEach(a => {
-    a.addEventListener('click', () => (mobileMenu.style.display = 'none'));
+    a.addEventListener('click', () => {
+      mobileMenu.style.display = 'none';
+      hamburger.setAttribute('aria-expanded', 'false');
+      
+      // Reset hamburger icon
+      const spans = hamburger.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    });
   });
 }
 
@@ -25,6 +48,7 @@ if (hamburger && mobileMenu) {
 const roles = ['Data Analyst', 'Power BI Developer', 'Machine Learning', 'Researcher'];
 const rotator = document.getElementById('rotator');
 let idx = 0;
+
 setInterval(() => {
   idx = (idx + 1) % roles.length;
   if (rotator){
@@ -37,51 +61,50 @@ setInterval(() => {
 }, 2200);
 
 // Contact form handler
-
 const form = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault(); // stop redirect
-  const data = new FormData(form);
+if (form && formNote) {
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // stop redirect
+    const data = new FormData(form);
 
-  try {
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    if (response.ok) {
-      formNote.textContent = "✅ Message sent successfully!";
-      formNote.style.color = "green";
-      form.reset();
+      if (response.ok) {
+        formNote.textContent = "✅ Message sent successfully!";
+        formNote.style.color = "green";
+        form.reset();
 
-      // 👇 Clear the message after 3 seconds
-      setTimeout(() => {
-        formNote.textContent = "";
-      }, 3000);
+        // Clear the message after 3 seconds
+        setTimeout(() => {
+          formNote.textContent = "";
+        }, 3000);
 
-    } else {
-      formNote.textContent = "⚠️ Oops! Something went wrong.";
+      } else {
+        formNote.textContent = "⚠️ Oops! Something went wrong.";
+        formNote.style.color = "red";
+
+        // Clear error after 3 seconds too
+        setTimeout(() => {
+          formNote.textContent = "";
+        }, 3000);
+      }
+    } catch (err) {
+      formNote.textContent = "⚠️ Network error. Please try again later.";
       formNote.style.color = "red";
 
-      // Clear error after 3 seconds too
       setTimeout(() => {
         formNote.textContent = "";
       }, 3000);
     }
-  } catch (err) {
-    formNote.textContent = "⚠️ Network error. Please try again later.";
-    formNote.style.color = "red";
-
-    setTimeout(() => {
-      formNote.textContent = "";
-    }, 3000);
-  }
-});
-
-
+  });
+}
 
 // Hover tilt effect for hero card
 const tilt = document.querySelector('.card-3d');
@@ -100,9 +123,8 @@ if (tilt) {
   });
 }
 
-/* ----------------- SKILLS ACCORDION + PILL EFFECTS ----------------- */
+// Skills accordion
 (function(){
-  // Accordion (categories)
   const cats = document.querySelectorAll('.skills-accordion .cat-head');
   cats.forEach(head => {
     head.addEventListener('click', () => {
@@ -115,13 +137,6 @@ if (tilt) {
   });
   // open the first group by default
   if (cats[0]) cats[0].click();
-
-  // // Pill click animation (toggle)
-  // document.querySelectorAll('.pill').forEach(pill => {
-  //   pill.addEventListener('click', () => {
-  //     pill.classList.toggle('active'); // multiple pills can be active
-  //   });
-  // });
 })();
 
 // Reveal animation on scroll
@@ -137,7 +152,6 @@ const observer = new IntersectionObserver(entries => {
 
 animEls.forEach(el => observer.observe(el));
 
-
 // Hero parallax glows follow the cursor (subtle)
 (function(){
   const hero = document.querySelector('.hero-pro');
@@ -145,19 +159,30 @@ animEls.forEach(el => observer.observe(el));
   const g2 = document.querySelector('.hero-glow.g2');
   if (!hero || !g1 || !g2) return;
 
+  // Throttle mouse movement for better performance
+  let ticking = false;
   const move = (e) => {
-    const rect = hero.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    g1.style.setProperty('--x', x + '%');
-    g1.style.setProperty('--y', y + '%');
-    // slight lag for depth
-    g2.style.setProperty('--x', (x*0.8 + 10) + '%');
-    g2.style.setProperty('--y', (y*0.8 + 10) + '%');
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const rect = hero.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        g1.style.setProperty('--x', x + '%');
+        g1.style.setProperty('--y', y + '%');
+        // slight lag for depth
+        g2.style.setProperty('--x', (x*0.8 + 10) + '%');
+        g2.style.setProperty('--y', (y*0.8 + 10) + '%');
+        ticking = false;
+      });
+      ticking = true;
+    }
   };
-  hero.addEventListener('mousemove', move);
+  
+  // Only enable on non-touch devices for better performance
+  if (!('ontouchstart' in window)) {
+    hero.addEventListener('mousemove', move);
+  }
 })();
-
 
 // theme toggle
 (function(){
@@ -175,8 +200,7 @@ animEls.forEach(el => observer.observe(el));
   // 2) toggle on click
   btn?.addEventListener('click', () => {
     const current = document.documentElement.getAttribute('data-theme') || 'dark';
-    // const next = current === 'midnight' ? 'dark' : 'midnight';
-    const next = current === 'light' ? 'dark' : 'light'; // or cycle 'midnight'
+    const next = current === 'light' ? 'dark' : 'light';
     setTheme(next);
     localStorage.setItem(KEY, next);
   });
@@ -191,3 +215,41 @@ animEls.forEach(el => observer.observe(el));
     iconMoon.style.display = isLight ? 'none' : '';
   }
 })();
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById('hamburger');
+  
+  if (mobileMenu && hamburger && 
+      mobileMenu.style.display === 'flex' && 
+      !mobileMenu.contains(e.target) && 
+      !hamburger.contains(e.target)) {
+    mobileMenu.style.display = 'none';
+    hamburger.setAttribute('aria-expanded', 'false');
+    
+    // Reset hamburger icon
+    const spans = hamburger.querySelectorAll('span');
+    spans[0].style.transform = 'none';
+    spans[1].style.opacity = '1';
+    spans[2].style.transform = 'none';
+  }
+});
+
+// Optimize animations for mobile devices
+const isMobile = window.innerWidth <= 768;
+if (isMobile) {
+  // Reduce animation complexity on mobile
+  document.documentElement.style.setProperty('--reduced-motion', '1');
+}
+
+// Handle orientation change
+window.addEventListener('orientationchange', () => {
+  setTimeout(() => {
+    // Recalculate heights after orientation change
+    const hero = document.querySelector('.hero-pro');
+    if (hero) {
+      hero.style.minHeight = window.innerHeight * 0.8 + 'px';
+    }
+  }, 100);
+});
